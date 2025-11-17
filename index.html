@@ -4,79 +4,255 @@
   <meta charset="UTF-8" />
   <title>HQFY – Manhwas coreanos oficiais para o Brasil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HQFY é uma plataforma digital em desenvolvimento focada em trazer manhwas e webtoons coreanos oficialmente para o público brasileiro.">
   <style>
+    :root {
+      --bg: #020617;
+      --bg-soft: #020617;
+      --card: #020617;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.12);
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1220 0, #020617 55%);
+      color: var(--text);
       line-height: 1.6;
-      text-align: center;
-      padding: 0 16px;
     }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
     header {
-      padding: 80px 16px 40px;
+      padding: 16px 0 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    h1 {
-      font-size: 2.2rem;
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    .badge {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 32px 0 24px;
+      text-align: left;
+    }
+
+    .hero-title {
+      font-size: 2.4rem;
+      font-weight: 700;
       margin-bottom: 12px;
-      color: #f8fafc;
     }
-    p {
-      max-width: 700px;
-      margin: 0 auto 16px;
-      font-size: 1.05rem;
+
+    .hero-subtitle {
+      max-width: 640px;
+      color: var(--muted);
+      margin-bottom: 20px;
     }
-    section {
-      padding: 32px 16px;
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      margin-bottom: 12px;
     }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: default;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #022c22;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    main section {
+      margin-top: 32px;
+      padding: 20px 18px;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.94);
+      border: 1px solid var(--border);
+    }
+
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 12px;
-      color: #f8fafc;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
     }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .contact {
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .email-highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
     footer {
-      padding: 24px;
-      font-size: 0.85rem;
-      color: #94a3b8;
-      border-top: 1px solid #1e293b;
-      margin-top: 40px;
+      text-align: center;
+      padding: 24px 16px 32px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">HQFY</div>
+      <div class="badge">Em desenvolvimento</div>
+    </header>
 
-<header>
-  <h1>Manhwas coreanos oficiais para o Brasil</h1>
-  <p>Plataforma digital em desenvolvimento focada em webtoons e webnovels coreanos com 
-  <strong>licenciamento oficial</strong>, tradução em português e experiência de leitura moderna.</p>
-</header>
+    <section class="hero">
+      <div class="hero-tagline">Plataforma digital de manhwas coreanos</div>
+      <h1 class="hero-title">Manhwas coreanos oficiais para o Brasil</h1>
+      <p class="hero-subtitle">
+        A HQFY está sendo construída para trazer webtoons e webnovels coreanos
+        oficialmente para o público brasileiro, com licenciamento formal,
+        tradução em português e experiência de leitura moderna.
+      </p>
+      <div class="hero-buttons">
+        <span class="btn btn-primary">Lançamento em breve</span>
+        <span class="btn btn-outline">Focada em conteúdo licenciado</span>
+      </div>
+    </section>
 
-<section>
-  <h2>Quem somos</h2>
-  <p>
-    A HQFY está sendo construída para trazer obras coreanas oficialmente ao público brasileiro.  
-    Trabalhamos apenas com conteúdo licenciado, oferecendo traduções de qualidade e total respeito aos direitos autorais.
-  </p>
-  <p>
-    Contato para parcerias e licenças:<br>
-    <strong>business@hqfy.me</strong><br>
-    WhatsApp: +55 (19) 92000-3457
-  </p>
-</section>
+    <main>
+      <section>
+        <h2>Quem somos</h2>
+        <p>
+          A HQFY é uma plataforma digital em desenvolvimento dedicada a conectar o
+          público brasileiro ao universo dos manhwas e webtoons coreanos.
+        </p>
+        <p>
+          Nosso compromisso é trabalhar apenas com obras licenciadas, garantindo:
+        </p>
+        <ul>
+          <li>acordos formais com estúdios, editoras e autores coreanos;</li>
+          <li>traduções cuidadosas para o português-Brasil;</li>
+          <li>experiência de leitura confortável e segura;</li>
+          <li>respeito total aos direitos autorais.</li>
+        </ul>
+        <p class="contact">
+          Para parcerias e licenças:<br>
+          <span class="email-highlight">business@hqfy.me</span>
+        </p>
+      </section>
 
-<section>
-  <h2>For International Partners</h2>
-  <p>
-    HQFY is a Brazilian digital platform focused on officially licensed Korean webcomics and webnovels.  
-    If you are a Korean studio, publisher or author interested in the Brazilian market, contact us at<br>
-    <strong>business@hqfy.me</strong>.
-  </p>
-</section>
+      <section>
+        <h2>Para leitores brasileiros</h2>
+        <p>
+          A HQFY nasce olhando para a comunidade que já consome manhwas e webtoons
+          no Brasil e busca uma opção oficial, de qualidade e acessível.
+        </p>
+        <ul>
+          <li>catálogo com títulos coreanos licenciados;</li>
+          <li>leitura em português, pensada para mobile e desktop;</li>
+          <li>modelos como assinatura e/ou capítulos avulsos;</li>
+          <li>atualizações frequentes, em sincronia com o lançamento original.</li>
+        </ul>
+        <p class="muted">
+          Nosso objetivo é que o leitor possa apoiar diretamente os criadores,
+          sabendo que está consumindo conteúdo de forma correta.
+        </p>
+      </section>
 
-<footer>
-  © <script>document.write(new Date().getFullYear())</script> HQFY – All rights reserved.
-</footer>
+      <section>
+        <h2>For international partners</h2>
+        <p>
+          HQFY is a Brazilian digital platform focused on officially licensed
+          Korean webcomics and webnovels for the Portuguese-speaking market.
+        </p>
+        <p>
+          We are currently selecting titles and partners for our initial launch in Brazil.
+          If you are a Korean studio, publisher or author and are interested in the
+          Brazilian market, please contact us at:
+        </p>
+        <p class="contact">
+          <span class="email-highlight">business@hqfy.me</span>
+        </p>
+      </section>
+    </main>
 
+    <footer>
+      © <script>document.write(new Date().getFullYear())</script> HQFY – All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
