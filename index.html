@@ -42,10 +42,22 @@
       align-items: center;
     }
 
-    .logo {
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-wrap img {
+      height: 34px;
+      width: auto;
+      display: block;
+    }
+
+    .logo-text {
       font-weight: 700;
       letter-spacing: 0.08em;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
     }
 
@@ -169,13 +181,26 @@
       .hero-title {
         font-size: 2rem;
       }
+      header {
+        flex-direction: row;
+        align-items: center;
+      }
+      .logo-wrap img {
+        height: 30px;
+      }
+      .badge {
+        font-size: 0.75rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
     <header>
-      <div class="logo">HQFY</div>
+      <div class="logo-wrap">
+        <img src="logo.png" alt="HQFY logo">
+        <span class="logo-text">HQFY</span>
+      </div>
       <div class="badge">Em desenvolvimento</div>
     </header>
 
